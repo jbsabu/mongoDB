@@ -1,5 +1,4 @@
-
+.env
 node_modules
 mongoConnect.js
 package-lock.json
-.env

@@ -33,12 +33,16 @@ const editFruit = async () => {
 };
 
 const getAllFruits = async () => {
+  try{
   const allFruits = await collection
     .find()
     .toArray()
-    .then((items) => console.log(items))
-    .catch((err) => console.log(err));
-  console.log(allFruits);
+    console.log(allFruits)
+  } catch(error){
+    console.log(error)
+  } finally {
+    client.close()
+  }
 };
 
 getAllFruits();
